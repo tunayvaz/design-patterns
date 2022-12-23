@@ -1,17 +1,16 @@
-package com.tunayvaz.builder;
+package com.tunayvaz.builder.weapon;
 
-import com.tunayvaz.builder.model.SpellType;
-import com.tunayvaz.builder.model.StaffMaterialType;
-import com.tunayvaz.builder.model.Weapon;
-import com.tunayvaz.builder.model.WeaponType;
+import com.tunayvaz.builder.type.SpellType;
+import com.tunayvaz.builder.type.StaffMaterialType;
+import com.tunayvaz.builder.type.WeaponType;
 import lombok.Getter;
 
 @Getter
 public class Staff extends Weapon {
 
-    private StaffMaterialType material;
-    private SpellType spell;
-    private String name;
+    private final StaffMaterialType material;
+    private final SpellType spell;
+    private final String name;
 
     public Staff(Builder builder) {
         super(WeaponType.STAFF);
@@ -21,7 +20,7 @@ public class Staff extends Weapon {
     }
 
     public static class Builder {
-        private StaffMaterialType material;
+        private final StaffMaterialType material;
         private SpellType spell;
         private String name;
 

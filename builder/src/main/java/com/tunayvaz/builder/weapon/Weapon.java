@@ -1,5 +1,6 @@
-package com.tunayvaz.builder.model;
+package com.tunayvaz.builder.weapon;
 
+import com.tunayvaz.builder.type.WeaponType;
 import lombok.Data;
 
 @Data

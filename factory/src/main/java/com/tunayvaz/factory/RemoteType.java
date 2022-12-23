@@ -2,7 +2,6 @@ package com.tunayvaz.factory;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
-
 import java.util.function.Supplier;
 
 /**

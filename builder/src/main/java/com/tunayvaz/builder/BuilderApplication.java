@@ -1,12 +1,24 @@
 package com.tunayvaz.builder;
 
-import com.tunayvaz.builder.model.*;
+import com.tunayvaz.builder.type.*;
+import com.tunayvaz.builder.weapon.Staff;
+import com.tunayvaz.builder.weapon.Sword;
+import com.tunayvaz.builder.weapon.Weapon;
 import lombok.extern.slf4j.Slf4j;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+
+/**
+ * Look out! Enemy army approaches!
+ * We are going to need a brave soldier and a wise wizard to protect us.
+ * If there isn't any, we can build our own warriors because it makes total sense.
+ *
+ * The need of the Builder pattern is to find a solution to a problem called telescoping constructor anti-pattern
+ * which occurs when the object constructor parameter combination leads to a bunch of constructors.
+ * Instead of using numerous constructors, the builder pattern uses another object, a builder, that receives each
+ * initialization parameter step by step and then returns the resulting constructed object at once.
+ */
 @SpringBootApplication
 @Slf4j
 public class BuilderApplication {
@@ -19,7 +31,7 @@ public class BuilderApplication {
                 .withName("Widowmaker")
                 .build();
 
-        Staff staff = new Staff.Builder(StaffMaterialType.OAKEN)
+        Weapon staff = new Staff.Builder(StaffMaterialType.OAKEN)
                 .spell(SpellType.FIRE)
                 .name("Stormbringer")
                 .build();
@@ -40,6 +52,5 @@ public class BuilderApplication {
 
         log.info(soldier.toString());
         log.info(mage.toString());
-
     }
 }

@@ -17,5 +17,4 @@ public class FactoryApplication {
         remote2.open();
         remote3.open();
     }
-
 }

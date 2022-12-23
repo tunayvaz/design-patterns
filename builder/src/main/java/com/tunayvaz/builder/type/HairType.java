@@ -1,15 +1,13 @@
-package com.tunayvaz.builder.model;
-
+package com.tunayvaz.builder.type;
 
 import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
-public enum LocationType {
+public enum HairType {
 
-    ROME("Rome"),
-    BRITAIN("Britain"),
-    POLAND("Poland"),
-    MIDDLE_EARTH("Middle-Earth");
+    SHORT("short"),
+    CURLY("curly"),
+    LONG_STRAIGHT("long straight");
 
     private final String title;
 

@@ -1,5 +1,4 @@
-package com.tunayvaz.builder.model;
-
+package com.tunayvaz.builder.type;
 public enum SpellType {
 
     FIRE,

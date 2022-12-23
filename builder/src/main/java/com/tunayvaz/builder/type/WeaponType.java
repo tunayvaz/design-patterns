@@ -1,12 +1,12 @@
-package com.tunayvaz.builder.model;
+package com.tunayvaz.builder.type;
 
 import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
-public enum ProfessionType {
+public enum WeaponType {
 
-    SOLDIER("soldier"),
-    MAGE("mage");
+    SWORD("sword"),
+    STAFF("staff");
 
     private final String title;
 

@@ -1,20 +1,17 @@
-package com.tunayvaz.builder;
+package com.tunayvaz.builder.weapon;
 
-import com.tunayvaz.builder.model.SwordMaterialType;
-import com.tunayvaz.builder.model.SwordType;
-import com.tunayvaz.builder.model.Weapon;
-import com.tunayvaz.builder.model.WeaponType;
+import com.tunayvaz.builder.type.SwordMaterialType;
+import com.tunayvaz.builder.type.SwordType;
+import com.tunayvaz.builder.type.WeaponType;
 import lombok.Getter;
 
 @Getter
 public class Sword extends Weapon {
 
-    private int length;
-    private SwordMaterialType material;
-    private String name;
-    private SwordType swordType;
-
-    private final WeaponType weapon = WeaponType.SWORD;
+    private final int length;
+    private final SwordMaterialType material;
+    private final String name;
+    private final SwordType swordType;
 
     public Sword(Builder builder) {
         super(WeaponType.SWORD);

@@ -1,17 +1,22 @@
 package com.tunayvaz.builder;
 
-import com.tunayvaz.builder.model.*;
+import com.tunayvaz.builder.type.*;
+import com.tunayvaz.builder.weapon.Weapon;
 import lombok.Getter;
+
+/**
+ * Warrior, the class with many parameters.
+ */
 
 @Getter
 public class Warrior {
 
-    private Weapon weapon;
-    private String name;
-    private LocationType from;
-    private HairType hair;
-    private ProfessionType profession;
-    private ArmorType armor;
+    private final Weapon weapon;
+    private final String name;
+    private final LocationType from;
+    private final HairType hair;
+    private final ProfessionType profession;
+    private final ArmorType armor;
 
     public Warrior(Builder builder) {
         this.weapon = builder.weapon;
@@ -24,12 +29,13 @@ public class Warrior {
 
     public static class Builder {
 
-        private Weapon weapon;
-        private String name;
+        private final String name;
+        private final ProfessionType profession;
+
         private LocationType from;
         private HairType hair;
-        private ProfessionType profession;
         private ArmorType armor;
+        private Weapon weapon;
 
         public Builder(String name, ProfessionType profession) {
             this.name = name;

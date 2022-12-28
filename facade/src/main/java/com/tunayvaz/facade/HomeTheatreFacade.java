@@ -1,5 +1,12 @@
 package com.tunayvaz.facade;
 
+/**
+ * HomeTheatreFacade provides a single interface through which users can operate the
+ * subsystems.
+ *
+ * This makes the watching series easier to operate and cuts the dependencies from the home theatre user to
+ * the subsystems.
+ */
 public class HomeTheatreFacade {
 
     private Speaker speaker;
